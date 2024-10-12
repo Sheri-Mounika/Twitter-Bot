@@ -1,0 +1,18 @@
+How to run the projectcmd
+
+========================
+ How to run the jupyter notebook
+-------------------------------------------
+1.open anaconda prompt 
+2.conda activate project 
+3.cd C:\Users\sheri\OneDrive\Desktop\Project\Twitter Bot Detection\Twitter Bot Detection Notebook
+4.jupyter notebook
+-------------------------------------------------------------------------------------------------------------------
+ How to run the web application
+-------------------------------------------
+1.open anaconda prompt 
+2.conda activate project 
+3.cd C:\Users\sheri\OneDrive\Desktop\Project\Twitter Bot Detection\BotDetectionInTwitter
+4.python manage.py runserver
+5.http://127.0.0.1:8000
+-------------------------------------------------------------------------------------------------------------------

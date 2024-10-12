@@ -1,0 +1,77 @@
+{% load  static%}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Twitter  Bot Detection</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" title="style" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text" align="center">
+					<!-- class="logo_colour", allows you to change the colour of the text -->
+					<h3>
+						<center><a href="#"><font color="white" size="10" style="font-family: 'Times New Roman', Times, serif;" >Twitter Bot Detection</font></a></center>
+					</h3>
+					<br/><br/>
+				</div>
+			</div>
+		</div>
+		<div id="content_header"></div>
+		<div id="site_content">
+			<div id="content">
+
+                <div align="center"><font color="red" size="5">{{result}}</font></div>
+
+				<form name="form" action="/predict/" method="post">
+					{% csrf_token %}
+					<div class="form_settings">
+
+                        <p>
+							<font size="3"><span>Followers Count :</span></font><input class="contact" type="number"
+								name="followers_count" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>Friends Count :</span></font><input class="contact" type="number"
+								name="friends_count" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>Listed Count :</span></font><input class="contact" type="number"
+								name="listed_count" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>Favourites Count :</span></font><input class="contact" type="number"
+								name="favourites_count" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>is Verified Profile:</span></font><input class="contact" type="number"
+								name="verified" value="" required/>
+						</p>
+						<p>
+							<font size="3"><span>Statuses Count :</span></font><input class="contact" type="number"
+								name="statuses_count" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>is Default Profile Updated:</span></font><input class="contact" type="number"
+								name="default_profile" value="" required/>
+						</p>
+                        <p>
+							<font size="3"><span>is Default Profile Image Changed:</span></font><input class="contact" type="number"
+								name="default_profile_image" value="" required/>
+						</p>
+
+						<p style="padding-top: 15px">
+							<span>&nbsp;</span><input class="submit" type="submit"
+								name="contact_submitted" value="Predict" />
+						</p>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
